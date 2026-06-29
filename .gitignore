@@ -1,0 +1,33 @@
+# Folders
+.vscode/
+/data/
+/saved_objects/
+/runs/
+/models/
+__pycache__/
+.mypy_cache/
+/results/
+*build/
+*dist/
+*venv/
+*env/
+*site/
+.kiro
+.amazonq
+.env
+.env.*
+site/
+
+# Files
+*.txt
+*.csv
+*.out
+*.parquet
+*.xlsx
+*.json
+*.pkl
+*.pt
+*.ini
+*.zip
+*.pdf
+.vscode/launch.json

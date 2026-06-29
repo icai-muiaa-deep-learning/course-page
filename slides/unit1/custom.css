@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+.reveal pre {
+    border-radius: 10px;
+    position: relative;
+    overflow: visible;
+}
+
+.reveal pre code {
+    padding-top: 2em;
+    border-radius: 10px;
+}
+
+.reveal pre::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f56;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+    z-index: 1;
+}
+
+.reveal::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15%;
+    height: 15%;
+    background: url("images/icai_logo.png") no-repeat center/contain;
+    z-index: 1000;
+}
+
+.reveal a {
+    color: #e6b800;
+}
+
+.reveal a:hover {
+    color: #ffcc00;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    /* color: #e6b800; */
+    color: black;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+}
+
+.reveal .controls button {
+    color: #e6b800;
+}
+
+.reveal .progress span {
+    background: #e6b800;
+}
+
+.reveal ul li::marker,
+.reveal ol li::marker {
+    color: #e6b800;
+}
+
+.hljs {
+    color: rgba(255, 255, 255, 0.642) !important;
+}
+
+.hljs-title.function_ {
+    color: #e6c07b !important;
+}
+
+div.center > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.multicolumn {
+    /* https://stackoverflow.com/a/44392145 */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 5vw;
+    align-items: center;
+    margin-bottom: var(--content-padding-bottom);
+}
+
+.reveal img {
+    border-radius: 10px;
+}

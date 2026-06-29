@@ -1,0 +1,45 @@
+[project]
+name = "course-page"
+version = "2027.0"
+description = "Deep Learning Course Page"
+authors = [
+    {name = "Oscar Llorente Gonzalez", email = "ollorente@comillas.edu"},
+]
+readme = "README.md"
+requires-python = "==3.14.*"
+dependencies = [
+    "zensical",
+    "mkslides==2.0.18"
+]
+
+[tool.ruff]
+line-length = 88
+exclude = [
+    "*.ipynb",
+    ".venv/",
+]
+
+[tool.ruff.lint]
+select = ["F", "PL", "E", "D", "I", "W"]
+ignore = ["D212", "D200", "D202", "D205", "PLR1711", "PLR0913"]
+extend-select = ["D213", "W505"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 72
+
+[tool.ruff.lint.isort]
+known-first-party = ["src", "vio"]
+split-on-trailing-comma = true
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+
+[tool.ruff.lint.isort.import-heading]
+standard-library = "Standard libraries"
+third-party = "3pps"
+first-party = "Own modules"
+local-folder = "Own modules"
+
+
+
