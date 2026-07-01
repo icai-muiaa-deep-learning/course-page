@@ -6,6 +6,10 @@ icon: lucide/rocket
 
 This website is the documentation of the deep learning class. Here you will find everything
 
+Here are the [slides](slides/unit1/index.html)
+
+Here are the [slides in pdf](slides/unit1/index.html?print-pdf)
+
 ## Examples
 
 ### Admonitions
