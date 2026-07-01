@@ -1,0 +1,13 @@
+body {
+  text-align: justify;
+}
+
+.mermaid {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
