@@ -1,0 +1,13 @@
+slides:
+    theme: white
+    highlight_theme: atom-one-dark
+    title: Unit 1
+    favicon: images/icai_logo.png
+revealjs:
+    height: 1080
+    width: 1920
+plugins:
+    - extra_javascript:
+        - https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js
+    - extra_css:
+        - custom.css
