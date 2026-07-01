@@ -41,9 +41,9 @@ runs:
         cd slides/unit1 && uv run mkslides build . -d ../../docs/slides/unit1
         cd ../..
 
-        # Remove .git directories from mkslides build output to prevent
+        # Remove .git files/directories from mkslides build output to prevent
         # "invalid path" errors when mike commits to gh-pages
-        find docs/slides -name .git -type d -exec rm -rf {} + 2>/dev/null || true
+        find docs/slides -name .git -exec rm -rf {} + 2>/dev/null || true
 
         uv run mike deploy --push --update-aliases "${{ inputs.docs-version }}" latest
 
