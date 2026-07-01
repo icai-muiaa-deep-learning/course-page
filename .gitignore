@@ -31,3 +31,6 @@ site/
 *.zip
 *.pdf
 .vscode/launch.json
+
+# Ignores
+!setup-env/

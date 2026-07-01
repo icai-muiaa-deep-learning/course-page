@@ -1,0 +1,59 @@
+name: Setup Python Environment and uv
+description: Setup Python, uv, and dependencies for the project
+
+inputs:
+  src-python-version:
+    description: "Python version to set up for the project"
+    required: true
+
+  uv-group:
+    description: "Dependency group to install"
+    required: false
+
+  uv-extra:
+    description: "Dependency extra to install"
+    required: false
+
+runs:
+  using: composite
+  steps:
+    - name: Install uv and set the Python version
+      uses: astral-sh/setup-uv@v5
+
+    - name: Install dependencies with uv
+      id: install-deps
+      shell: bash
+      run: |
+        # Check if we should install all extras
+        if [ -z "${{ inputs.uv-group }}" ] && [ -z "${{ inputs.uv-extra }}" ]; then
+          echo "Installing all extras (default when no group or extra specified)..."
+          uv sync --all-extras
+        elif [ "${{ inputs.uv-extra }}" = "--all-extras" ]; then
+          echo "Installing all extras (explicitly requested)..."
+          if [ -n "${{ inputs.uv-group }}" ]; then
+            echo "Note: Installing all extras overrides the specified group: ${{ inputs.uv-group }}"
+          fi
+          uv sync --all-extras
+        else
+          echo "Installing with group: ${{ inputs.uv-group }}, and extra: ${{ inputs.uv-extra }}..."
+          if [ -n "${{ inputs.uv-group }}" ] && [ -n "${{ inputs.uv-extra }}" ]; then
+            uv sync --group ${{ inputs.uv-group }} --extra ${{ inputs.uv-extra }}
+          elif [ -n "${{ inputs.uv-group }}" ]; then
+            uv sync --group ${{ inputs.uv-group }}
+          elif [ -n "${{ inputs.uv-extra }}" ]; then
+            uv sync --extra ${{ inputs.uv-extra }}
+          else
+            uv sync
+          fi
+        fi
+
+    - name: Verify uv and environment
+      id: verify
+      shell: bash
+      run: |
+        echo "uv version:"
+        uv --version
+        echo "Virtual environments:"
+        uv venv list
+        echo "Python version:"
+        uv run python --version
