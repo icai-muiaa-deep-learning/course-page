@@ -19,6 +19,19 @@ title: "Foundations of Neural Networks"
 
 ---
 
+<section>
+<div class="mermaid">
+flowchart LR
+    A[Black] --> B[Ruff Isort];
+    B --> C[Flake8];
+    C --> D[Pylint];
+    D --> E[Complexipy];
+    E --> F[Mypy];
+</div>
+</section>
+
+---
+
 ## Real vs Artificial Neuron
 
 <div class="multicolumn">

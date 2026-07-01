@@ -7,5 +7,7 @@ revealjs:
     height: 1080
     width: 1920
 plugins:
+    - extra_javascript:
+        - https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js
     - extra_css:
         - custom.css

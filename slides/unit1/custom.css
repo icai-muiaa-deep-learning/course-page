@@ -91,3 +91,34 @@ div.multicolumn {
 .reveal img {
     border-radius: 10px;
 }
+
+.reveal .mermaid svg {
+    width: 80% !important;
+    max-width: none !important;
+    height: auto !important;
+    transform: scale(1.5);
+    transform-origin: center center;
+}
+
+/* Override Mermaid default purple/violet node colors to yellow */
+.reveal .mermaid .node rect,
+.reveal .mermaid .node circle,
+.reveal .mermaid .node ellipse,
+.reveal .mermaid .node polygon,
+.reveal .mermaid .node path {
+    fill: #fff9c4 !important;
+    stroke: #e6b800 !important;
+}
+
+.reveal .mermaid .edgePath .path {
+    stroke: #e6b800 !important;
+}
+
+.reveal .mermaid .edgeLabel {
+    background-color: #fff9c4 !important;
+}
+
+/* .reveal .mermaid marker path {
+    fill: #e6b800 !important;
+    stroke: #e6b800 !important;
+} */

@@ -9,8 +9,12 @@ readme = "README.md"
 requires-python = "==3.14.*"
 dependencies = [
     "zensical",
-    "mkslides==2.0.18"
+    "mkslides==2.0.18",
+    "mike"
 ]
+
+[tool.uv.sources]
+mike = { git = "https://github.com/squidfunk/mike.git" }
 
 [tool.ruff]
 line-length = 88
