@@ -1,5 +1,5 @@
 ---
-icon: simple/markdown
+icon: lucide/library
 ---
 
 # Markdown in 5min
