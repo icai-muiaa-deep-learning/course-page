@@ -4,8 +4,12 @@ site_description = "Course Page for the Deep Learning Class in the Master of App
 site_author = "Oscar Llorente Gonzalez"
 # site_url = "https://www.example.com/"
 copyright = """
-Copyright &copy; 2026 The authors
+Copyright &copy; 2026 Oscar Llorente Gonzalez
 """
+repo_name = "deep-learning/course-page"
+repo_url = "https://github.com/icai-muiaa-deep-learning/course-page"
+docs_dir = "docs"
+site_dir = "site"
 
 [project.extra.version]
 provider = "mike"
@@ -209,8 +213,9 @@ logo = "assets/images/leon_icai.png"
 # - https://zensical.org/docs/setup/logo-and-icons
 # - https://github.com/zensical/ui/tree/master/dist/.icons
 # ----------------------------------------------------------------------------
-#[project.theme.icon]
-#logo = "lucide/smile"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
 
 [project.theme.font]
 text = "Jetbrains Mono"
@@ -237,9 +242,9 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/icai-muiaa-deep-learning/course-page"
 
 # ----------------------------------------------------------------------------
 # In this section you can configure the Markdown extensions that are used when
