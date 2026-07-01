@@ -93,10 +93,9 @@ div.multicolumn {
 }
 
 .reveal .mermaid svg {
-    width: 80% !important;
+    width: 100% !important;
     max-width: none !important;
     height: auto !important;
-    transform: scale(1.5);
     transform-origin: center center;
 }
 
