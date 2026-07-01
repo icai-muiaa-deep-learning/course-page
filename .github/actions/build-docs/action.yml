@@ -38,9 +38,9 @@ runs:
       shell: bash
       run: |
         echo "Deploying Docs Version: ${{ inputs.docs-version }}"
-        cd slides/unit1 && mkslides build . -d ../../docs/slides/unit1
+        cd slides/unit1 && uv run mkslides build . -d ../../docs/slides/unit1
         uv run mike deploy --push --update-aliases "${{ inputs.docs-version }}" latest
-        
+
         cd slides/unit1 && uv mkslides build . -d ../../site/slides/unit1
 
     - name: Set Default Version
